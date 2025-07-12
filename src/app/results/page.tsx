@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React , {Suspense} from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { ArrowLeft, Heart, Activity, Shield, TrendingUp, AlertTriangle, CheckCircle, Target, Brain, Zap } from 'lucide-react';
 
@@ -14,11 +14,11 @@ interface PredictionResult {
     obesity: number;
 }
 
-const ResultsPage = () => {
+const ResultsPageContent = () => {
     const searchParams = useSearchParams();
     const router = useRouter();
     
-    // Parse the prediction result from URL params
+    
     const predictionData = searchParams.get('data');
     let predictionResult: PredictionResult | null = null;
     
@@ -256,4 +256,10 @@ const ResultsPage = () => {
     );
 };
 
-export default ResultsPage;
+export default function ResultsPage(){
+     return (
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+            <ResultsPageContent />
+        </Suspense>
+    );
+};
