@@ -301,7 +301,7 @@ const AnalyzerPage = () => {
                                         type="number"
                                         value={userData.age}
                                         onChange={(e) => handleInputChange('age', e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl text-black focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                         placeholder="Enter age"
                                     />
                                 </div>
@@ -310,7 +310,7 @@ const AnalyzerPage = () => {
                                     <select
                                         value={userData.gender}
                                         onChange={(e) => handleInputChange('gender', e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl text-black focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                     >
                                         <option value="female">Female</option>
                                         <option value="male">Male</option>
@@ -327,7 +327,7 @@ const AnalyzerPage = () => {
                                         step="0.1"
                                         value={userData.bmi}
                                         onChange={(e) => handleInputChange('bmi', e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl text-black focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                         placeholder="Enter BMI"
                                     />
                                 </div>
@@ -337,7 +337,7 @@ const AnalyzerPage = () => {
                                         type="number"
                                         value={userData.blood_glucose_level}
                                         onChange={(e) => handleInputChange('blood_glucose_level', e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl text-black focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                         placeholder="Enter glucose level"
                                     />
                                 </div>
@@ -351,7 +351,7 @@ const AnalyzerPage = () => {
                                         step="0.1"
                                         value={userData.hba1c_level}
                                         onChange={(e) => handleInputChange('hba1c_level', e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl text-black focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                         placeholder="Enter HbA1c"
                                     />
                                 </div>
@@ -364,7 +364,7 @@ const AnalyzerPage = () => {
                                             max="10"
                                             value={userData.diet_score}
                                             onChange={(e) => handleInputChange('diet_score', parseInt(e.target.value))}
-                                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                                            className="w-full h-2 bg-gray-200 rounded-lg text-black appearance-none cursor-pointer slider"
                                             style={{
                                                 background: `linear-gradient(to right, #10b981 0%, #10b981 ${((userData.diet_score - 1) / 9) * 100}%, #e5e7eb ${((userData.diet_score - 1) / 9) * 100}%, #e5e7eb 100%)`
                                             }}
@@ -405,7 +405,7 @@ const AnalyzerPage = () => {
                                     </label>
                                     <select
                                         onChange={(e) => handleCityChange(e.target.value)}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                                         defaultValue=""
                                     >
                                         <option value="" disabled>Choose your city</option>
